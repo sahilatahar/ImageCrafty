@@ -13,7 +13,7 @@ export default function Header() {
 	return (
 		<header className="flex items-center justify-center gap-4 flex-col py-14">
 			<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-sand-900">
-				ImageGenius
+				ImageCrafty
 			</h1>
 			<p className="text-center">
 				Discover Your Artistic Side with Free AI Image Generation.
