@@ -6,7 +6,7 @@ const ImageGrid = () => {
 	const { images } = useImages()
 
 	return (
-		<div className="image-grid p-2 md:p-8">
+		<div className="image-grid p-4 md:p-8 pb-7">
 			{images
 				?.map((image, index) => <ImageCard key={index} src={image} />)
 				.reverse()}

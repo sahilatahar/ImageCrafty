@@ -2,6 +2,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { useImages } from "@/context/ImagesContext"
+import { IoClose } from "react-icons/io5"
 
 interface ImageCardProp {
 	src: string
@@ -9,7 +10,7 @@ interface ImageCardProp {
 
 function ImageCard({ src }: ImageCardProp) {
 	const [isLoading, setIsLoading] = useState(true)
-	const { images, removeImage } = useImages()
+	const { removeImage } = useImages()
 
 	const onImageLoad = () => {
 		setIsLoading(false)
@@ -23,10 +24,10 @@ function ImageCard({ src }: ImageCardProp) {
 		<div className="w-full border border-sand-700 rounded-md relative group">
 			{!isLoading && (
 				<button
-					className="rounded-full w-8 h-8 bg-sand-700 hidden justify-center items-center text-white absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 group-hover:flex text-2xl"
+					className="rounded-full w-8 h-8 bg-sand-700 flex sm:hidden justify-center items-center text-white absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 group-hover:flex text-2xl"
 					onClick={handleRemove}
 				>
-					×
+					<IoClose size={26} />
 				</button>
 			)}
 			{isLoading && (
@@ -54,7 +55,7 @@ function ImageCard({ src }: ImageCardProp) {
 				unoptimized
 			/>
 			<a
-				className="bg-sand-700 text-white rounded-b-md p-3 w-full inline-block text-center"
+				className="bg-sand-700 text-white rounded-b-md p-3 w-full inline-block text-center font-semibold"
 				href={src}
 				download="image.jpg"
 				target="_blank"

@@ -11,7 +11,7 @@ export default function Header() {
 	}
 
 	return (
-		<header className="flex items-center justify-center gap-4 flex-col py-14">
+		<header className="flex items-center justify-center gap-4 flex-col pt-14 pb-7 px-2 md:px-4">
 			<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-sand-900">
 				ImageCrafty
 			</h1>
